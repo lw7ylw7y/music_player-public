@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- What Android's backup and phone-to-phone transfer may copy (R-17, Technical Design 6): the playlists, and nothing else.
+     app.db (the song cache, the queue, the resume state, the settings and the error log) is rebuilt on the new phone, where its
+     stored media-index ids would be wrong. Naming one file under include leaves out every other file, app.db among them; Android Lint
+     rejects an exclude of a path that is not inside an include, so there is none. -->
+<data-extraction-rules>
+    <cloud-backup>
+        <include domain="database" path="playlists.db" />
+    </cloud-backup>
+    <device-transfer>
+        <include domain="database" path="playlists.db" />
+    </device-transfer>
+</data-extraction-rules>

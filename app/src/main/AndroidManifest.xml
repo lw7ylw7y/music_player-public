@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Only the permissions listed in Technical Design 8. INTERNET is for the song-details lookup only (R-19, R-18): the code that
+         uses the network is in app.songplayer.details.net and nowhere else (SourceRulesTest). -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <!-- The splitter's background job (V2, Technical Design 5.9) runs as a data-processing foreground service. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- V1.1 (R-27): the user's "Media management" access, which lets the app change the tags of the song files without a dialog for
+         each batch. The user grants it in Android's settings; without it the app asks per batch or keeps the details in the app. -->
+    <uses-permission android:name="android.permission.MANAGE_MEDIA" tools:ignore="ProtectedPermissions" />
+
+    <!-- WorkManager's network constraint ("Only on Wi-Fi", R-28) needs this normal permission (no prompt). -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Jetpack Glance runs on WorkManager, which declares a boot-receiver permission this app does not use (no boot receiver);
+         it is taken out of the merge so the allowed list of Technical Design 8 holds. -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" tools:node="remove" />
+
+    <!-- Automatic backup is on for the playlists only (R-17): the rules file includes playlists.db and nothing else. minSdk is 33,
+         so only the rules of Android 12 and newer are needed (no fullBackupContent). -->
+    <!-- MissingIntentFilterForMediaSearch: the car's assistant sends spoken requests to the media session (PlaybackService), not
+         as an intent to an activity. "Play ..." said to the assistant on the phone itself is not part of V1 (R-16 is the car), so
+         no MEDIA_PLAY_FROM_SEARCH filter is declared; a filter with no activity code behind it would be half-built. -->
+    <application
+        android:name=".SongPlayerApp"
+        tools:ignore="MissingIntentFilterForMediaSearch"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SongPlayer">
+
+        <!-- singleTask: a file opened from another app comes to the one running instance (onNewIntent), never a second one. -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- "Open with" for an MP3 in a file manager (R-15). Only MP3, and the code accepts only content addresses. -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="audio/mpeg" />
+            </intent-filter>
+        </activity>
+
+        <!-- The home-screen widget (R-24). A widget receiver has to be exported for Android to update it; it does nothing but
+             redraw the widget from what the app already shows. -->
+        <receiver
+            android:name=".widget.SongWidgetReceiver"
+            android:exported="true"
+            android:label="@string/widget_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/song_widget_info" />
+        </receiver>
+
+        <!-- Android Auto asks for two icons: the launcher icon (android:icon above) and this small monochrome attribution icon, shown on its media cards. -->
+        <meta-data
+            android:name="androidx.car.app.TintableAttributionIcon"
+            android:resource="@drawable/ic_status_icon" />
+
+        <!-- Tells Android Auto that this is a media app, so it lists Music Player and browses the library through the service below. -->
+        <meta-data
+            android:name="com.google.android.gms.car.application"
+            android:resource="@xml/automotive_app_desc" />
+
+        <!-- WorkManager runs the splitter's foreground work in its own service; it only needs the type declared. -->
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:foregroundServiceType="dataSync"
+            tools:node="merge" />
+
+        <!-- The one playback service: it owns the player and the media session (Technical Design 5.5). -->
+        <service
+            android:name=".playback.PlaybackService"
+            android:exported="true"
+            android:foregroundServiceType="mediaPlayback">
+            <intent-filter>
+                <action android:name="androidx.media3.session.MediaLibraryService" />
+                <action android:name="android.media.browse.MediaBrowserService" />
+            </intent-filter>
+        </service>
+
+        <!-- Headset and Bluetooth buttons reach the session through this receiver, even when the app is not running. -->
+        <receiver
+            android:name="androidx.media3.session.MediaButtonReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

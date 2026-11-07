@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Debug builds only: the tests' fake lookup server listens on the phone itself, without TLS. Release builds have no such file,
+     so they allow no cleartext traffic at all (Android's default for apps that target API 28 or newer). -->
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">localhost</domain>
+        <domain includeSubdomains="false">127.0.0.1</domain>
+    </domain-config>
+</network-security-config>

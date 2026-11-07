@@ -1,0 +1,71 @@
+# Expected values of the command-line tool (cli/splitmp3.py, find_cuts and missed_stretches) on the curves of GapFinderTest.
+# Made with numpy 2.5.3 by a script outside the repo; lines: name|cut|time ms|length ms|depth dB|confident|reason|strength, name|levels|floor|median, name|missed|start ms|end ms (from the confident cuts, as the tool does).
+album|levels|-23.000000|-20.000000
+album|cut|242510|5020|-100|1||24.535250
+album|cut|517500|5000|-100|1||24.437500
+album|cut|763000|6000|-100|1||29.325000
+album|cut|1012010|4020|-100|1||19.647750
+album|cut|1302500|5000|-100|1||24.437500
+album|cut|1522500|5000|-100|1||24.437500
+album|end
+nogaps|levels|-23.000000|-20.000000
+nogaps|end
+close|levels|-23.000000|-20.000000
+close|cut|303000|6000|-100|0|a similar gap within a minute|29.325000
+close|cut|902500|5000|-100|1||24.437500
+close|cut|1402500|5000|-100|1||24.437500
+close|end
+shallowdips|levels|-23.000000|-20.000000
+shallowdips|cut|242490|5020|-100|1||24.535250
+shallowdips|cut|520300|600|-65|0|a similar gap within a minute|1.882500
+shallowdips|cut|802510|5020|-100|1||24.535250
+shallowdips|cut|1102500|5000|-100|1||24.437500
+shallowdips|cut|1402500|5000|-100|1||24.437500
+shallowdips|end
+edges|levels|-99.000000|-20.000000
+edges|cut|242500|5000|-100|1||10.187500
+edges|cut|702500|5000|-100|1||10.187500
+edges|cut|1102500|5000|-100|1||10.187500
+edges|end
+tooshort|levels|-99.000000|-20.000000
+tooshort|end
+longstretch|levels|-23.000000|-20.000000
+longstretch|cut|302500|5000|-100|1||24.437500
+longstretch|cut|2102480|5040|-100|1||24.633000
+longstretch|missed|302500|2102480
+longstretch|end
+tie|levels|-23.000000|-20.000000
+tie|cut|342510|5020|-100|0|a similar gap within a minute|24.535250
+tie|cut|902500|5000|-100|1||24.437500
+tie|cut|1402500|5000|-100|1||24.437500
+tie|end
+weakstrong|levels|-23.000000|-20.000000
+weakstrong|cut|305010|10020|-100|1||48.972750
+weakstrong|cut|902500|5000|-100|1||24.437500
+weakstrong|cut|1402500|5000|-100|1||24.437500
+weakstrong|end
+exact60|levels|-23.000000|-20.000000
+exact60|cut|60000|5000|-100|1||24.437500
+exact60|cut|302490|5020|-100|1||24.535250
+exact60|cut|902490|5020|-100|1||24.535250
+exact60|cut|1740000|5000|-100|1||24.437500
+exact60|missed|902490|1740000
+exact60|end
+constant|levels|-20.000000|-20.000000
+constant|end
+album_min6|levels|-23.000000|-20.000000
+album_min6|cut|242510|5020|-100|0|short gap|24.535250
+album_min6|cut|517500|5000|-100|0|short gap|24.437500
+album_min6|cut|763000|6000|-100|1||29.325000
+album_min6|cut|1012010|4020|-100|0|short gap|19.647750
+album_min6|cut|1302500|5000|-100|0|short gap|24.437500
+album_min6|cut|1522500|5000|-100|0|short gap|24.437500
+album_min6|end
+notsilent|levels|-98.000000|-20.000000
+notsilent|cut|245000|10000|-100|1||20.750000
+notsilent|cut|602500|5000|-85|0|not fully silent|6.625000
+notsilent|cut|905000|10000|-100|1||20.750000
+notsilent|cut|1205000|10000|-100|1||20.750000
+notsilent|cut|1505000|10000|-100|1||20.750000
+notsilent|cut|1705000|10000|-100|1||20.750000
+notsilent|end

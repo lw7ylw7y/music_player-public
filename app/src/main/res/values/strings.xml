@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Music Player</string>
+
+    <!-- A1, A2, A9 (UX Design section 5) -->
+    <string name="access_first_title">Find the music on this phone</string>
+    <string name="access_first_body">Music Player needs to read the audio files on this phone to show your library. Nothing is sent anywhere, and your files are never changed.</string>
+    <string name="access_first_button">Allow access to music</string>
+    <string name="access_refused_title">Music access is turned off</string>
+    <string name="access_refused_body">Without it, Music Player can\'t see the songs on this phone. You can allow it now, or in Settings.</string>
+    <string name="access_try_again">Try again</string>
+    <string name="access_open_settings">Open Settings</string>
+    <string name="empty_title">No MP3 files found</string>
+    <string name="empty_body">Copy some MP3 files to this phone, then refresh. Only MP3 files are shown.</string>
+    <string name="refresh_library">Refresh library</string>
+    <string name="loading">Reading your music…</string>
+
+    <!-- Library -->
+    <string name="tab_songs">Songs</string>
+    <string name="tab_albums">Albums</string>
+    <string name="tab_artists">Artists</string>
+    <string name="tab_playlists">Playlists</string>
+    <string name="more_options">More options</string>
+    <string name="sort_label">Sort: %1$s</string>
+    <string name="sort_a_to_z">Sorted A to Z. Tap to reverse.</string>
+    <string name="sort_z_to_a">Sorted Z to A. Tap to reverse.</string>
+    <string name="sort_newest_first">Sorted newest first. Tap to reverse.</string>
+    <string name="sort_oldest_first">Sorted oldest first. Tap to reverse.</string>
+    <string name="sort_title">Title</string>
+    <string name="sort_artist">Artist</string>
+    <string name="sort_recently_added">Recently added</string>
+    <string name="new_songs_show">Show</string>
+    <string name="sync_failed_title">Couldn\'t read your music</string>
+    <string name="sync_failed_body">Something went wrong while reading the music on this phone. Try again.</string>
+    <string name="refresh_failed">Couldn\'t read your music.</string>
+    <string name="refresh_failed_retry">Try again</string>
+
+    <plurals name="song_count">
+        <item quantity="one">%1$s song</item>
+        <item quantity="other">%1$s songs</item>
+    </plurals>
+    <plurals name="album_count">
+        <item quantity="one">%1$s album</item>
+        <item quantity="other">%1$s albums</item>
+    </plurals>
+    <plurals name="artist_count">
+        <item quantity="one">%1$s artist</item>
+        <item quantity="other">%1$s artists</item>
+    </plurals>
+    <plurals name="new_songs_found">
+        <item quantity="one">%1$s new song found</item>
+        <item quantity="other">%1$s new songs found</item>
+    </plurals>
+
+    <!-- Search (UX Design B1, B2) -->
+    <string name="search_open">Search</string>
+    <string name="search_hint">Search your music</string>
+    <string name="search_back">Back</string>
+    <string name="search_clear">Clear search</string>
+    <string name="nothing_found_title">Nothing found for \"%1$s\"</string>
+    <string name="nothing_found_body">Try a song title, an artist or an album. Simplified and traditional Chinese both work.</string>
+
+    <!-- Player (UX Design 4.5) -->
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="close_now_playing">Close Now Playing</string>
+    <string name="open_now_playing">Open Now Playing</string>
+    <string name="mini_player_description">Now playing: %1$s by %2$s</string>
+    <string name="seek">Seek</string>
+    <string name="seek_description">%1$s of %2$s</string>
+    <plurals name="spoken_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="spoken_seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
+    <string name="cant_play">Can\'t play</string>
+    <string name="song_row_cant_play">%1$s, can\'t play</string>
+    <string name="song_row_playing">%1$s, playing</string>
+
+    <!-- Queue, shuffle and repeat (UX Design 4.5, 4.6, 4.7) -->
+    <string name="shuffle_on">Shuffle on</string>
+    <string name="shuffle_off">Shuffle off</string>
+    <string name="repeat_off">Repeat off</string>
+    <string name="repeat_all">Repeat all</string>
+    <string name="repeat_one">Repeat one</string>
+    <string name="queue">Queue</string>
+    <string name="queue_empty">The queue is empty</string>
+    <string name="queue_empty_body">Tap a song in the Library to start playing.</string>
+    <string name="queue_now_playing">Now playing</string>
+    <string name="queue_next_from_list">Next from the list</string>
+    <string name="queue_added">Added to queue</string>
+    <string name="queue_row_description">%1$s, %2$s</string>
+    <string name="queue_row_current">%1$s, playing now</string>
+    <string name="remove_from_queue">Remove from queue</string>
+    <string name="back">Back</string>
+    <string name="playing_from">Playing from: %1$s</string>
+    <string name="playing_from_songs">Songs</string>
+    <string name="playing_from_search">Search results</string>
+    <string name="playing_from_playlist">Playlist</string>
+    <string name="menu_play_next">Play next</string>
+    <string name="menu_add_to_queue">Add to queue</string>
+    <string name="song_more_options">More options for %1$s</string>
+    <string name="snackbar_will_play_next">Will play next</string>
+    <string name="snackbar_added_to_queue">Added to queue</string>
+
+    <!-- Row text read by TalkBack -->
+    <string name="song_row_description">%1$s, %2$s, %3$s</string>
+    <string name="album_row_description">%1$s, %2$s, %3$s</string>
+    <string name="artist_row_description">%1$s, %2$s</string>
+    <string name="album_row_subtitle">%1$s · %2$s</string>
+    <string name="song_row_subtitle">%1$s · %2$s</string>
+
+    <!-- Playlists (UX Design 4.4, 4.7 and 5) -->
+    <string name="playlist_new">New playlist</string>
+    <string name="playlists_none_hint">Your playlists appear here.</string>
+    <string name="playlist_row_description">%1$s, %2$s</string>
+    <string name="playlists_damaged_title">Your playlists can\'t be opened right now.</string>
+    <string name="playlists_damaged_body">The playlists saved on this phone can\'t be read. Your music files are not affected.</string>
+    <string name="playlists_read_failed_title">Your playlists couldn\'t be read.</string>
+    <string name="playlists_read_failed_body">Something went wrong while reading them. Try again.</string>
+    <string name="playlist_try_again">Try again</string>
+    <string name="playlist_gone">This playlist no longer exists.</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_create">Create</string>
+    <string name="dialog_rename_action">Rename</string>
+    <string name="dialog_name_field">Name</string>
+    <string name="dialog_rename_title">Rename playlist</string>
+    <string name="dialog_delete_title">Delete \"%1$s\"?</string>
+    <string name="dialog_delete_body">The playlist is deleted. Your song files are not touched.</string>
+    <string name="dialog_delete_action">Delete</string>
+    <string name="menu_rename_playlist">Rename</string>
+    <string name="menu_delete_playlist">Delete playlist</string>
+    <string name="menu_remove_from_playlist">Remove from playlist</string>
+    <string name="playlist_save_failed">Couldn\'t save the playlist. The phone may be out of space.</string>
+    <string name="snackbar_removed">Removed \"%1$s\"</string>
+    <string name="snackbar_undo">Undo</string>
+    <string name="playlist_header">%1$s · %2$s</string>
+    <string name="playlist_minutes">%1$s min</string>
+    <string name="playlist_hours_minutes">%1$s h %2$s min</string>
+    <plurals name="playlist_count">
+        <item quantity="one">%1$s playlist</item>
+        <item quantity="other">%1$s playlists</item>
+    </plurals>
+    <string name="edit_order_title">Edit \"%1$s\"</string>
+    <string name="group_header">%1$s · %2$s · %3$s</string>
+    <string name="shuffle_button">Shuffle</string>
+    <string name="playlist_empty_title">This playlist is empty</string>
+    <string name="playlist_empty_body">Open the menu on any song and choose \"Add to playlist\".</string>
+    <string name="menu_add_to_playlist">Add to playlist</string>
+    <string name="sheet_add_to_playlist_title">Add to playlist</string>
+    <string name="snackbar_added_to">Added to %1$s</string>
+    <string name="snackbar_already_in">Already in %1$s</string>
+    <plurals name="snackbar_added_songs">
+        <item quantity="one">Added %1$s song to %2$s</item>
+        <item quantity="other">Added %1$s songs to %2$s</item>
+    </plurals>
+    <string name="snackbar_added_songs_some_already_in">%1$s (%2$s already in it)</string>
+    <string name="selection_count">%1$s selected</string>
+    <string name="selection_close">Cancel selection</string>
+    <string name="song_row_selected">%1$s, selected</string>
+    <string name="select_action">Select</string>
+    <string name="menu_edit_order">Edit order</string>
+    <string name="edit_done">Done</string>
+    <string name="move_up">Move up</string>
+    <string name="move_down">Move down</string>
+    <string name="move_to_top">Move to top</string>
+    <string name="reorder_handle">Reorder</string>
+    <string name="move_song_up">Move song up</string>
+    <string name="move_song_down">Move song down</string>
+    <string name="playing_from_file">File</string>
+    <string name="open_file_error_title">This file can\'t be played</string>
+    <string name="open_file_error_body">It isn\'t an MP3 file, or it can\'t be read.</string>
+    <string name="dialog_ok">OK</string>
+    <string name="sleep_timer">Sleep timer</string>
+    <string name="sleep_timer_on">Sleep timer on</string>
+    <plurals name="sleep_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <string name="sleep_end_of_song">End of song</string>
+    <string name="sleep_cancel">Cancel timer</string>
+    <string name="sleep_running">Sleep in %1$s</string>
+    <string name="sleep_end_of_song_line">Sleep after this song</string>
+    <string name="menu_settings">Settings</string>
+    <string name="settings_title">Settings</string>
+    <string name="settings_copy_diagnostics">Copy diagnostics</string>
+    <string name="settings_copy_diagnostics_body">Copies the app version, phone model, Android version and recent error codes. It never includes song, artist, file or playlist names.</string>
+    <string name="settings_about">About Music Player</string>
+    <string name="settings_about_body">Version %1$s · Plays the music stored on this phone. No account, no ads. The internet is used only to look up song details, and only if you turn that on.</string>
+    <string name="diagnostics_copied">Diagnostics copied</string>
+    <string name="diagnostics_clip_label">Music Player diagnostics</string>
+    <string name="widget_label">Music Player</string>
+    <string name="widget_description">The song that plays, with previous, play and next.</string>
+    <string name="widget_tap_to_open">Tap to open</string>
+    <string name="widget_open_app">Open Music Player</string>
+    <string name="car_empty_message">Open Music Player on your phone to set up your music.</string>
+    <string name="menu_edit_details">Edit details</string>
+    <string name="edit_details_title">Edit details</string>
+    <string name="edit_field_title">Title</string>
+    <string name="edit_field_artist">Artist</string>
+    <string name="edit_field_album">Album</string>
+    <string name="edit_details_help">Saved in the song file, so other apps and the car show it too. The music itself is not changed.</string>
+    <string name="edit_details_save">Save</string>
+    <string name="edit_details_discard_title">Discard your changes?</string>
+    <string name="edit_details_discard">Discard</string>
+    <string name="details_saved">Details saved</string>
+    <string name="details_in_app_only">Saved in the app only. Allow changes to your songs to save them in the files.</string>
+    <string name="details_allow">Allow</string>
+    <string name="details_in_app_unsupported">Saved in the app only. This song\'s tag is of a kind Music Player doesn\'t change.</string>
+    <string name="details_in_app_low_space">Saved in the app only. There isn\'t enough free space to change the song\'s file.</string>
+    <string name="details_in_app_too_big">Saved in the app only. The song\'s tag is too big to change safely.</string>
+    <string name="details_in_app_unreadable">Saved in the app only. The song\'s file couldn\'t be read.</string>
+    <string name="details_save_failed">Couldn\'t save the details. The phone may be out of space.</string>
+    <string name="details_undone">Earlier details are back</string>
+    <string name="details_undo_file_changed">Another app changed this song\'s details, so they were left as they are.</string>
+    <string name="details_undo_later">This was changed again later. Undo the later change first.</string>
+    <string name="settings_export_playlists">Export playlists</string>
+    <string name="settings_export_playlists_body">Saves all playlists, and the record of which songs the details lookup already checked, to a file you choose.</string>
+    <string name="settings_import_playlists">Import playlists</string>
+    <string name="settings_import_playlists_body">Adds the playlists and the check record from a file made by Export. Your current playlists and decisions are not changed.</string>
+    <string name="export_default_name">music-player-playlists.json</string>
+    <plurals name="playlists_exported">
+        <item quantity="one">%1$s playlist exported</item>
+        <item quantity="other">%1$s playlists exported</item>
+    </plurals>
+    <plurals name="playlists_imported">
+        <item quantity="one">%1$s playlist imported</item>
+        <item quantity="other">%1$s playlists imported</item>
+    </plurals>
+    <string name="export_with_details">The record of which songs were already checked is included.</string>
+    <plurals name="details_record_restored">
+        <item quantity="one">The check record of %1$s song was restored.</item>
+        <item quantity="other">The check record of %1$s songs was restored.</item>
+    </plurals>
+    <string name="details_record_failed">The record of which songs were already checked could not be restored.</string>
+    <string name="export_nothing">There is nothing to export.</string>
+    <string name="import_nothing_new">Nothing to import: these playlists are already here.</string>
+    <string name="import_refused">This is not a Music Player playlist file. Nothing was changed.</string>
+    <string name="transfer_unavailable">Playlists can\'t be read right now, so nothing was changed.</string>
+    <string name="transfer_unavailable_damaged">The playlists file is damaged, so nothing was changed.</string>
+    <string name="export_failed">Couldn\'t save the file. It may be empty or incomplete; your playlists are unchanged.</string>
+    <string name="transfer_failed">Couldn\'t read or write the file. Nothing was changed.</string>
+    <string name="settings_song_details">Song details</string>
+    <string name="settings_song_details_on">Fills in missing titles, artists and albums. On.</string>
+    <string name="settings_song_details_off">Fills in missing titles, artists and albums. Off.</string>
+    <string name="song_details_title">Song details</string>
+    <string name="recent_title">Recently filled in</string>
+    <string name="recent_help">Details changed by you or by the app in the last 30 days. Undo puts the earlier ones back, in the song too.</string>
+    <string name="recent_empty">Nothing has been changed yet.</string>
+    <string name="recent_edited_by_you">Edited by you</string>
+    <string name="recent_filled_in">Filled in by Music Player</string>
+    <string name="recent_row_line">%1$s · %2$s · %3$s</string>
+    <string name="recent_row_description">%1$s, %2$s, %3$s: %4$s</string>
+    <string name="details_switch_title">Fill in missing details</string>
+    <string name="details_switch_body">Looks up the title, artist and album of songs that lack them.</string>
+    <string name="details_wifi_title">Only on Wi-Fi</string>
+    <string name="details_wifi_body">Waits for Wi-Fi instead of using mobile data.</string>
+    <string name="details_only_new_title">Only look up new songs</string>
+    <string name="details_only_new_body">Songs already on your phone are left alone. Only songs added after you turn this on are looked up. Turning it off again includes the older songs.</string>
+    <string name="details_replace_title">Also replace details that are already filled in</string>
+    <string name="details_replace_body">When the music database is sure, its title, artist and album replace the ones in the song. Songs that already have all three are looked up too. You can undo this.</string>
+    <string name="switch_word_on">On</string>
+    <string name="switch_word_off">Off</string>
+    <string name="details_state_off">Turn on \"Fill in missing details\" to look up songs.</string>
+    <string name="details_state_unavailable">Song details isn\'t available in this build.</string>
+    <string name="details_state_running">Looking up songs…</string>
+    <string name="details_state_running_count">%1$s of %2$s checked</string>
+    <string name="details_state_wifi">Waiting for Wi-Fi</string>
+    <plurals name="details_state_wifi_body">
+        <item quantity="one">%1$s song is still to be checked. It continues when Wi-Fi is back.</item>
+        <item quantity="other">%1$s songs are still to be checked. They continue when Wi-Fi is back.</item>
+    </plurals>
+    <string name="details_state_wait">The music database asked us to wait</string>
+    <string name="details_state_wait_body">It will be tried again tomorrow.</string>
+    <string name="details_state_offline">No internet right now. It continues when you are online.</string>
+    <string name="details_state_done">All songs checked.</string>
+    <plurals name="details_state_done_review">
+        <item quantity="one">All songs checked. %1$s needs your review.</item>
+        <item quantity="other">All songs checked. %1$s need your review.</item>
+    </plurals>
+    <string name="details_state_nothing">Every song already has a title, artist and album.</string>
+    <plurals name="details_files_title">
+        <item quantity="one">%1$s song\'s details are only in the app</item>
+        <item quantity="other">%1$s songs\' details are only in the app</item>
+    </plurals>
+    <string name="details_files_body">Allow changes to your songs to save the details inside the files, then tap Write them now.</string>
+    <string name="details_files_body_granted">Android needs to confirm the change for each song once. Tap Write them now to save the details inside the files.</string>
+    <string name="details_write_now">Write them now</string>
+    <plurals name="details_written_songs">
+        <item quantity="one">Saved in %1$s song</item>
+        <item quantity="other">Saved in %1$s songs</item>
+    </plurals>
+    <string name="consent_title">Fill in missing details?</string>
+    <string name="consent_body">Music Player makes a short fingerprint of each song that lacks a title, artist or album and asks a free music database (AcoustID and MusicBrainz) what it is. It sends only the fingerprint and the song\'s length, never the file name or your playlists. The database also sees this phone\'s internet address.</string>
+    <string name="consent_permission">To save the details inside your songs, Android will ask for your permission.</string>
+    <string name="consent_not_now">Not now</string>
+    <string name="consent_turn_on">Turn on</string>
+    <plurals name="review_banner">
+        <item quantity="one">%1$s song needs your review</item>
+        <item quantity="other">%1$s songs need your review</item>
+    </plurals>
+    <string name="review_banner_action">Review</string>
+    <string name="review_banner_dismiss">Dismiss</string>
+    <string name="review_title">Review · %1$s of %2$s</string>
+    <string name="review_heading">Review</string>
+    <string name="review_this_song">This song</string>
+    <string name="review_now">Now: %1$s</string>
+    <string name="review_which">Which one is it?</string>
+    <string name="review_use">Use this</string>
+    <string name="review_none">None of these</string>
+    <string name="review_skip">Skip for now</string>
+    <string name="review_play">Play</string>
+    <string name="review_pause">Pause</string>
+    <string name="review_failed">The songs to review couldn\'t be read. Nothing was changed.</string>
+    <string name="review_retry">Try again</string>
+    <string name="review_choice_line">%1$s · %2$s</string>
+    <string name="review_choice_no_artist">Artist unknown</string>
+    <string name="review_choice_no_album">Album unknown</string>
+    <string name="review_choice_description">%1$s, %2$s, %3$s</string>
+    <string name="review_empty">No songs are waiting for review.</string>
+    <string name="review_done_title">All reviewed</string>
+    <plurals name="review_done_body">
+        <item quantity="one">%1$s song decided: %2$s filled in, %3$s rejected, %4$s skipped.</item>
+        <item quantity="other">%1$s songs decided: %2$s filled in, %3$s rejected, %4$s skipped.</item>
+    </plurals>
+    <string name="review_done_button">Done</string>
+    <string name="notfound_title">Not found</string>
+    <string name="notfound_help">The music database didn\'t know these songs, or they couldn\'t be read. Edit a song to fill in its details yourself.</string>
+    <string name="notfound_empty">No songs are listed here.</string>
+    <string name="notfound_edit">Edit</string>
+    <plurals name="notfound_row">
+        <item quantity="one">%1$s song was not found</item>
+        <item quantity="other">%1$s songs were not found</item>
+    </plurals>
+    <string name="notfound_edit_description">Edit details of %1$s</string>
+
+    <!-- Splitting a long MP3 into songs: the notification of the background job (UX Design 4.11, R-43). -->
+    <string name="split_channel_name">Splitting songs</string>
+    <string name="split_notification_finding">Finding the songs…</string>
+    <string name="split_notification_writing">Writing song %1$d of %2$d…</string>
+    <string name="split_notification_done">Done. %1$d songs were written.</string>
+    <string name="split_notification_found">Found %1$d songs. Open Music Player to check them.</string>
+    <string name="split_notification_stopped">Stopped. %1$d songs were kept.</string>
+    <string name="split_notification_failed">Splitting stopped. Open Music Player to see why.</string>
+    <string name="split_notification_cancel">Cancel</string>
+
+    <!-- Splitting a long MP3: the menu entry, the checks and the screens K1 and K2 (UX Design 4.11). -->
+    <string name="menu_delete_song">Delete from phone</string>
+    <string name="selection_delete">Delete</string>
+    <string name="delete_songs_title">Delete from this phone?</string>
+    <string name="delete_song_body">\u201c%1$s\u201d will be deleted from this phone and removed from your playlists. This can\'t be undone.</string>
+    <string name="delete_songs_body">%1$s songs will be deleted from this phone and removed from your playlists. This can\'t be undone.</string>
+    <string name="delete_confirm">Delete</string>
+    <plurals name="songs_deleted">
+        <item quantity="one">%1$s song deleted</item>
+        <item quantity="other">%1$s songs deleted</item>
+    </plurals>
+    <string name="delete_failed">Couldn\'t delete. Nothing was changed.</string>
+    <string name="menu_split">Split into songs</string>
+    <string name="split_title">Split into songs</string>
+    <string name="split_unreadable_title">Can\'t split this file</string>
+    <string name="split_unreadable_body">Music Player couldn\'t read it as an MP3. The file was not changed.</string>
+    <string name="split_too_large_title">This file is too large</string>
+    <string name="split_too_large_body">Files up to 500 MB can be split.</string>
+    <string name="split_too_many_title">Too many songs</string>
+    <string name="split_too_many_body">Music Player found %1$d songs; it can split up to %2$d.</string>
+    <string name="split_gone_title">The file is no longer there</string>
+    <string name="split_gone_body">Nothing was written.</string>
+    <string name="split_folder_title">Where should the songs go?</string>
+    <string name="split_folder_body">Android doesn\'t let Music Player add songs to the folder this file is in. They can go into %1$s instead.</string>
+    <string name="split_folder_use">Use Music folder</string>
+    <string name="split_continue_title">Continue the earlier split?</string>
+    <string name="split_continue_body">%1$d of %2$d songs were written before it stopped.</string>
+    <string name="split_continue">Continue</string>
+    <string name="split_start_over">Start over</string>
+    <string name="split_finding">Finding the songs…</string>
+    <string name="split_progress">%1$d %%</string>
+    <string name="split_found_header">%1$s · %2$d songs found</string>
+    <string name="split_found_counts">%1$d look right · %2$d need a look</string>
+    <string name="split_found_all_right">All %1$d look right</string>
+    <string name="split_row_looks_right">Looks right</string>
+    <string name="split_row_check">Please check</string>
+    <string name="split_row_description">Song %1$d, %2$s to %3$s, %4$s, %5$s</string>
+    <string name="split_row_times">%1$s – %2$s</string>
+    <string name="split_row_length">%1$s</string>
+    <string name="split_check_songs">Check the %1$d songs</string>
+    <string name="split_check_one_song">Check the song</string>
+    <string name="split_split_songs">Split into %1$d songs</string>
+    <string name="split_add_cut">Add a cut</string>
+    <string name="split_no_gaps_title">No gaps found</string>
+    <string name="split_no_gaps_body">This file may be one song, or the songs run together. You can add cuts by hand.</string>
+    <string name="split_add_cut_title">Add a cut</string>
+    <string name="split_add_cut_label">Time (minutes:seconds)</string>
+    <string name="split_add_cut_error">Use a time like 8:30, at least 5 seconds from the start, the end and the other cuts.</string>
+    <string name="split_add_cut_confirm">Add</string>
+    <string name="split_leave_title">Leave without splitting?</string>
+    <string name="split_leave_body">Nothing has been written.</string>
+    <string name="split_leave">Leave</string>
+    <string name="split_stay">Stay</string>
+
+    <!-- Checking one cut (K3, UX Design 4.11). -->
+    <string name="cut_title">Cut %1$d of %2$d</string>
+    <string name="cut_between">Between song %1$d and song %2$d</string>
+    <string name="cut_time_description">Cut at %1$s</string>
+    <string name="cut_gap_description">Gap from %1$s to %2$s</string>
+    <string name="cut_no_gap_description">The cut was placed by hand or moved; there is no gap around it.</string>
+    <string name="cut_position">Cut position</string>
+    <string name="cut_play">Play the cut</string>
+    <string name="cut_pause">Pause</string>
+    <string name="cut_play_note">Playing the cut replaces your queue. Nothing is written.</string>
+    <string name="cut_earlier">Earlier</string>
+    <string name="cut_later">Later</string>
+    <string name="cut_earlier_description">Move the cut earlier by half a second</string>
+    <string name="cut_later_description">Move the cut later by half a second</string>
+    <string name="cut_closest">Closest allowed</string>
+    <string name="cut_use">Use this cut</string>
+    <string name="cut_remove">Remove this cut</string>
+    <string name="cut_next">Next</string>
+    <string name="cut_unchecked_note">%1$d cuts were not checked. They will be used as found.</string>
+
+    <plurals name="cut_spoken_minutes">
+        <item quantity="one">%1$d minute</item>
+        <item quantity="other">%1$d minutes</item>
+    </plurals>
+    <plurals name="cut_spoken_seconds">
+        <item quantity="one">%1$d second</item>
+        <item quantity="other">%1$d seconds</item>
+    </plurals>
+    <string name="cut_spoken_and_a_half">%1$s and a half</string>
+    <string name="cut_spoken_join">%1$s %2$s</string>
+    <string name="split_row_open_cut">Check this cut</string>
+
+    <!-- Ready to split, Writing and Done (K4 to K6, UX Design 4.11). -->
+    <string name="ready_title">Ready to split</string>
+    <string name="ready_summary">%1$s will be split into %2$d songs.</string>
+    <string name="ready_names_label">Names</string>
+    <string name="ready_names_value">%1$s … %2$s</string>
+    <string name="ready_folder_label">Folder</string>
+    <string name="ready_space_label">Space</string>
+    <string name="ready_space_ok">Needs %1$s · %2$s free</string>
+    <string name="ready_space_short">Not enough space: needs %1$s, %2$s free.</string>
+    <string name="ready_original_stays">The original stays as it is. Songs get titles later from "Fill in missing details", if it is on.</string>
+    <string name="ready_unchecked">%1$d cuts were not checked. They will be used as found.</string>
+    <string name="ready_unchecked_one">1 cut was not checked. It will be used as found.</string>
+    <string name="ready_check_them">Check them</string>
+    <string name="ready_back">Back</string>
+    <string name="writing_progress">Writing song %1$d of %2$d…</string>
+    <string name="done_title">%1$d songs written</string>
+    <string name="done_title_continued">%1$d songs written (%2$d earlier, %3$d now)</string>
+    <string name="done_where">They are in %1$s.</string>
+    <string name="done_show_songs">Show the songs</string>
+    <string name="done_delete_original_question">%1$s is still there. Delete it?</string>
+    <string name="done_keep">Keep</string>
+    <string name="done_delete">Delete</string>
+    <string name="done_original_deleted">The original was deleted.</string>
+    <string name="done_remove_songs">Remove these songs</string>
+    <string name="done_remove_title">Remove %1$d songs?</string>
+    <string name="done_remove_body">This deletes the songs this split made. The original is not touched.</string>
+    <string name="done_remove_confirm">Remove</string>
+    <string name="done_songs_removed">The songs were removed.</string>
+    <string name="done_close">OK</string>
+    <string name="stopped_title">Stopped. %1$d songs were kept.</string>
+    <string name="stopped_no_space">Stopped: not enough space.</string>
+    <string name="stopped_source_gone">Stopped: the file is no longer there.</string>
+    <string name="stopped_failed">Stopped: a song could not be written.</string>
+    <string name="split_name_in_use_title">A file with this name already exists</string>
+    <string name="split_name_in_use_body">%1$s is already in this folder and is different. Nothing was written.</string>
+
+    <!-- The Library banner for a splitting job that is not on screen, and the way to send it there. -->
+    <string name="split_in_background">Keep going in the background</string>
+    <string name="split_banner_finding">Finding the songs… %1$d %%</string>
+    <string name="split_banner_writing">Writing song %1$d of %2$d…</string>
+    <string name="split_banner_found">Found %1$d songs.</string>
+    <string name="split_banner_done">%1$d songs written.</string>
+    <string name="split_banner_stopped">Stopped. %1$d songs were kept.</string>
+    <string name="split_banner_open">Open</string>
+    <string name="split_banner_check">Check them</string>
+    <string name="split_banner_dismiss">Dismiss</string>
+    <string name="split_busy">Another split is in progress. Finish or cancel it first.</string>
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Debug builds only: a second launcher icon for the library report used to check the media index on a real phone. -->
+    <application
+        android:networkSecurityConfig="@xml/network_security_config"
+        tools:ignore="MissingIntentFilterForMediaSearch">
+        <activity
+            android:name="app.songplayer.debug.LibraryReportActivity"
+            android:exported="true"
+            android:label="Library report">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Debug builds only: the check of the song-details lookup on a real phone (Stories H5); it changes nothing. -->
+        <activity
+            android:name="app.songplayer.debug.DetailsCheckActivity"
+            android:exported="true"
+            android:label="Details check">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Debug builds only: the check of where the app may create song files (splitter spike P-C); it leaves nothing behind. -->
+        <activity
+            android:name="app.songplayer.debug.SplitFolderCheckActivity"
+            android:exported="true"
+            android:label="Split folder check">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Debug builds only: finds the songs of one big MP3 and writes them into Music/SplitCheck/ (splitter spikes P-B and P-D). -->
+        <activity
+            android:name="app.songplayer.debug.SplitCheckActivity"
+            android:exported="true"
+            android:label="Split check">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
